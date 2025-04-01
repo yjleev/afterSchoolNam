@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "맑은 고딕";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+}
+
+main>* {
+    border: 1px solid #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* aside */
+aside {
+    width: 200px;
+}
+
+aside>* {
+    border: 1px solid #333;
+}
+
+aside header {
+    height: 100px;
+}
+
+aside nav {
+    height: 400px;
+}
+
+aside .spot-menu {
+    height: 50px;
+}
+
+section>* {
+    border: 1px solid #333;
+}
+
+/* section */
+section {
+    /* width: calc(100% - 200px); */
+    flex-grow: 1;
+}
+
+.slide-wrapper>* {
+    border: 1px solid #333;
+}
+
+.slide-img {
+    height: 400px;
+}
+
+.banner {
+    width: 150px;
+    height: 350px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.slide-wrapper {
+    height: 400px;
+}
+
+.items {
+    height: 450px;
+}
+
+.items>* {
+    border: 1px solid #333;
+}
+
+.shortcut {
+    border: 1px solid #333;
+    height: 200px;
+}
+
+.news-gallery {
+    height: 250px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    display: flex;
+}
+
+.footer-logo {
+    width: 200px;
+}
+
+.copyright {
+    flex: 1;
+}
+
+.sns {
+    width: 250px;
+}
+
+footer>* {
+    border: 1px solid #333;
+    height: 100px;
+}
