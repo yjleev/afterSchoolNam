@@ -1,117 +1,149 @@
 @charset "UTF-8";
 
-* {
+
+*{
     margin: 0;
-    padding: 0;
+    padding: 0;    
     font-family: "맑은 고딕";
-    font-size: 14px;
-    color: #333;
+    font-size: 16px;
+    color:#333;
     box-sizing: border-box;
 }
 
-main {
+main{
     display: flex;
 }
 
-main>* {
+main>*{
     border: 1px solid #333;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
-li {
-    list-style: none;
+section{
+    height: 850px;
 }
 
-/* aside */
-aside {
+/*aside*/
+aside{
     width: 200px;
 }
 
-aside>* {
+aside>*{
     border: 1px solid #333;
 }
 
-aside header {
-    height: 100px;
+aside header{ height: 100px;}
+aside nav{height: 750px;}
+aside .spot-menu{height: 50px;}
+
+.main-menu {
+    width: 90%;
+    margin: 10px auto;
 }
 
-aside nav {
-    height: 400px;
+.main-menu>li {
+    background-color: #ccc;
+    line-height: 40px;
+    text-align: center;
 }
 
-aside .spot-menu {
+.main-menu a {
+    color: #fff;
+}
+
+.sub-menu{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.main-menu > li:hover .sub-menu {
+    max-height: 500px;
+}   
+
+.sub-menu>li {
+    background-color: #e6e6e6;
+}
+
+.spot-menu {
     height: 50px;
+    text-align: center;
 }
 
-section>* {
+.spot-menu a:first-child:after {
+    content: "  |";
+}
+
+/*section*/
+section{
+    /*width: calc(100%-200px);*/
+    flex:1;
+}
+
+.slide-wrapper>*{
     border: 1px solid #333;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
 }
 
-/* section */
-section {
-    /* width: calc(100% - 200px); */
-    flex-grow: 1;
-}
-
-.slide-wrapper>* {
-    border: 1px solid #333;
-}
-
-.slide-img {
+.slide-image{
+    display: flex;
     height: 400px;
 }
 
-.banner {
+.slide-image img {
+    height: 400px;
+}
+
+.banner{
     width: 150px;
-    height: 350px;
+    height: 300px;
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.slide-wrapper {
-    height: 400px;
-}
 
-.items {
+
+
+.items{
     height: 450px;
 }
 
-.items>* {
+.items>*{
     border: 1px solid #333;
 }
 
-.shortcut {
-    border: 1px solid #333;
-    height: 200px;
+.shortcut{
+   height: 200px;
 }
 
-.news-gallery {
+.news-gallery{
     height: 250px;
 }
 
-/* footer */
-footer {
+
+/*footer*/
+footer{
     width: 100%;
     display: flex;
 }
 
-.footer-logo {
+.footer-logo{
     width: 200px;
 }
-
-.copyright {
-    flex: 1;
+.copyright{
+    flex:1;
 }
-
-.sns {
+.sns{
     width: 250px;
 }
 
-footer>* {
+footer>*{
     border: 1px solid #333;
     height: 100px;
 }
