@@ -3,11 +3,15 @@
 
 *{
     margin: 0;
-    padding: 0;    
+    padding: 0;
     font-family: "맑은 고딕";
     font-size: 16px;
     color:#333;
     box-sizing: border-box;
+}
+
+body {
+    position: relative;
 }
 
 main{
@@ -24,6 +28,10 @@ a{
 
 section{
     height: 850px;
+}
+
+li {
+    list-style: none;
 }
 
 /*aside*/
@@ -86,13 +94,14 @@ section{
 .slide-wrapper{
     border: 1px solid #333;
     position: relative;
+    flex-grow: 1;
     height: 400px;
     overflow: hidden;
 }
 
 .slide-image{
     display: flex;
-    width: 300%;
+    width: calc(100%*4);
     height: 400px;
     animation: slider 15s linear infinite;
 }
@@ -101,32 +110,29 @@ section{
     0%{
         transform: translateX(0);
     }
-    23%{
+    23.3%{
         transform: translate(0);
     }
-    33%{
-        transform: translate(calc(-100%/3));
+    33.3%{
+        transform: translate(-25%);
     }
-    56%{
-        transform: translate(calc(-100%/3));
+    56.6%{
+        transform: translate(-25%);
     }
-    66%{
-        transform: translate(calc((-100%/3)*2));
+    66.6%{
+        transform: translate(-50%);
     }
-    86%{
-        transform: translate(calc((-100%/3)*2));
+    90%{
+        transform: translate(-50%);
     }
     100%{
-        transform: translate(0);  
+        transform: translate(-75%);
     }
 }
 
 .slider {
-    width: 100%;
+    width: calc(100%/4);
 }
-
-
-
 
 .banner{
     width: 150px;
@@ -157,10 +163,95 @@ section{
     margin-bottom: 0 0 50px 0;
 }
 
-.news-gallery{
+
+/* 탭메뉴 */
+
+.tabmenu{
+    display: flex;
+    position: relative;
     height: 250px;
 }
 
+.btnCon {
+    float: left;
+    width: 85px;
+    text-align: center;
+    background: #a5a5a5;
+    /* display: none; */
+}
+
+.btnCon label { /* 상단 공지사항, 갤러리 모양 */
+    display: block;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.tabmenu input:checked~label {
+    background-color: #e6e6e6;
+}
+
+.tabmenu input:checked~.tabCon {
+    display: block;
+}
+
+/* 하단내용-공지사항 */
+.tabCon {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 35px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.tabCon ul {
+    width: 100%;
+}
+
+.tabmenu input {
+    display: none;
+}
+
+.tabmenu ul {
+    width: 100%;
+}
+
+.tabCon li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    transition: 0.3s;
+    border-bottom: 1px dashed #ebebeb;
+}
+
+.tabmenu .news li:hover {
+    background: #ebebeb;
+}
+.tabmenu .news a:hover {
+    font-weight: bold;
+}
+
+.tabmenu input {
+    display: none;
+}
+
+/* 하단내용_갤러리 */
+
+.tabCon .gallery {
+    display: flex;
+    padding: 30px 10px;
+}
+
+.tabmenu .gallery li {
+    width: 100%;
+}
+
+.tabmenu .gallery li:hover {
+    opacity: 0.5;
+}
 
 /*footer*/
 footer{
@@ -181,4 +272,54 @@ footer{
 footer>*{
     border: 1px solid #333;
     height: 100px;
+}
+
+/* 팝업 */
+.popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px #00000050;
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+}
+
+.popup:target {
+    display: block;
+}
+
+.popup_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.popup p {
+    padding-top: 10px;
+}
+
+.popup_content > .close {
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.popup_content > .close > a {
+    padding: 5px 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
 }

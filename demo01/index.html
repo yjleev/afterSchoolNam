@@ -58,6 +58,7 @@
                     <img class="slider" src="image/slide_d_01.jpg" alt="슬라이드1">
                     <img class="slider" src="image/slide_d_02.jpg" alt="슬라이드2">
                     <img class="slider" src="image/slide_d_03.jpg" alt="슬라이드3">
+                    <img class="slider" src="image/slide_d_01.jpg" alt="슬라이드1">
                 </div>
                 <div class="banner"></div>
             </div>
@@ -70,7 +71,40 @@
                     </div>
                     <img src="image/shortcut_arrow.png" alt="숏컷 화살표">
                 </div>
-                <div class="news-gallery"></div>
+
+                <div class="tabmenu">
+                    <ul>
+                        <li id="tab1" class="btnCon"><!-- 공지사항(news) -->
+                            <input type="radio" checked name="tabmenu" id="tabmenu1">
+                            <label for="tabmenu1">공지사항</label>
+                            <div class="tabCon">
+                                <ul class="news">
+                                    <li><a href="#pop1" class="call_pupup">여행 후기 이벤트 안내</a><span class="date">2024.03.01</span></li>
+                                    <li><a href="#">서울 구석구석 여행관련 안내사항</a><span class="date">2024.03.01</span></li>
+                                    <li><a href="#">이벤트 당첨자 안내</a><span class="date">2024.03.01</span></li>
+                                    <li><a href="#">서울 장미 축제 안내</a><span class="date">2024.03.01</span></li>
+                                    <li><a href="#">고객 서비스 안내</a><span class="date">2024.03.01</span></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li id="tab2" class="btnCon"><!-- 갤러리(gallery) -->
+                            <input type="radio" name="tabmenu" id="tabmenu2">
+                            <label for="tabmenu2">갤러리</label>
+                            <div class="tabCon">
+                                <ul class="gallery">
+                                    <li><a href="#"><img src="./image/gallery_01.png" alt="gallery_01"></a></li>
+                                    <li><a href="#"><img src="./image/gallery_02.png" alt="gallery_02"></a></li>
+                                    <li><a href="#"><img src="./image/gallery_03.png" alt="gallery_03"></a></li>
+                                    <li><a href="#"><img src="./image/gallery_04.png" alt="gallery_04"></a></li>
+                                    <li><a href="#"><img src="./image/gallery_05.png" alt="gallery_05"></a></li>
+                                    <li><a href="#"><img src="./image/gallery_06.png" alt="gallery_06"></a></li>
+                                    <li><a href="#"><img src="./image/gallery_07.png" alt="gallery_07"></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
@@ -91,7 +125,13 @@
         </div>
     </footer>
 
-
+    <div class="popup" id="pop1">
+        <div class="popup_content">
+            <h2>여행 후기 이벤트 안내</h2>
+            <p>서울 구석구석입니다. 여행 후기 이벤트서울 구석구석입니다. 여행 후기 이벤트서울 구석구석입니다. 여행 후기 이벤트</p>
+            <div class="close"><a href="#">닫기</a></div>
+        </div>
+    </div>
 </body>
 
 </html>
