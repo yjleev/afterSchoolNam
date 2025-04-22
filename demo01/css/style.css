@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+:root {
+    --border-size: 0px;
+    --border-color: transparent;
+}
 
 *{
     margin: 0;
@@ -19,7 +23,7 @@ main{
 }
 
 main>*{
-    border: 1px solid #333;
+    border: var(--border-size) solid var(--border-color);
 }
 
 a{
@@ -40,7 +44,7 @@ aside{
 }
 
 aside>*{
-    border: 1px solid #333;
+    border: var(--border-size) solid var(--border-color);
 }
 
 aside header{ height: 100px;}
@@ -70,10 +74,18 @@ aside .spot-menu{height: 50px;}
 
 .main-menu > li:hover .sub-menu {
     max-height: 500px;
+}
+.main-menu > li:hover {
+    background-color: #bbbbbb;
 }   
+
 
 .sub-menu>li {
     background-color: #e6e6e6;
+    cursor: pointer;
+}
+.sub-menu>li:hover {
+    background-color: #dcdcdc;
 }
 
 .spot-menu {
@@ -85,6 +97,10 @@ aside .spot-menu{height: 50px;}
     content: "  |";
 }
 
+.spot-menu a:hover {
+    text-decoration: underline;
+}
+
 /*section*/
 section{
     /*width: calc(100%-200px);*/
@@ -92,7 +108,7 @@ section{
 }
 
 .slide-wrapper{
-    border: 1px solid #333;
+    border: var(--border-size) solid var(--border-color);
     position: relative;
     flex-grow: 1;
     height: 400px;
@@ -136,10 +152,16 @@ section{
 
 .banner{
     width: 150px;
-    height: 300px;
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.banner > img {
+    cursor: pointer;
 }
 
 .items{
@@ -147,7 +169,7 @@ section{
 }
 
 .items>*{
-    border: 1px solid #333;
+    border: var(--border-size) solid var(--border-color);
 }
 
 .shortcut{
@@ -155,12 +177,16 @@ section{
    display: flex;
    height: 200px;
    align-items: center;
-   gap: 20;
+   gap: 20px;
    padding: 0 15px;
 }
 
 .shortcut .content h3 {
     margin-bottom: 0 0 50px 0;
+}
+
+.shortcut > img {
+    cursor: pointer;
 }
 
 
@@ -264,13 +290,35 @@ footer{
 }
 .copyright{
     flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .sns{
     width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sns > ul {
+    display: flex;
+    gap: 10px;
+}
+
+.sns > ul > li {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 50px;
+}
+
+.sns > ul > li > img{
+    height: 100%;
+    cursor: pointer;
 }
 
 footer>*{
-    border: 1px solid #333;
+    border: var(--border-size) solid var(--border-color);
     height: 100px;
 }
 
